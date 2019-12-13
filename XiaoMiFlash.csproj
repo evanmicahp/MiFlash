@@ -61,6 +61,7 @@
     <Reference Include="System.Management" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="form\DriverFrm.cs" />
     <Compile Include="MiInstaller.cs">
       <SubType>Component</SubType>
     </Compile>

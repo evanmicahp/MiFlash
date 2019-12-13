@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,6 +48,7 @@ namespace XiaoMiFlash
         private MenuStrip menuStrip1;
         private ToolStripMenuItem miConfiguration;
         private ToolStripMenuItem miFlashConfigurationToolStripMenuItem;
+        private ToolStripMenuItem miInstallDrivers;
 
         public MainFrm()
         {
@@ -63,10 +64,10 @@ namespace XiaoMiFlash
 
         private void InitializeComponent()
         {
+            CheckAdmin(IsRunAsAdmin());
             components = new Container();
             txtPath = new TextBox();
             btnBrwDic = new Button();
-            btnDriver = new Button();
             fbdSelect = new FolderBrowserDialog();
             btnRefresh = new Button();
             btnFlash = new Button();
@@ -89,6 +90,7 @@ namespace XiaoMiFlash
             menuStrip1 = new MenuStrip();
             miConfiguration = new ToolStripMenuItem();
             miFlashConfigurationToolStripMenuItem = new ToolStripMenuItem();
+            miInstallDrivers = new ToolStripMenuItem();
             statusStrp.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -112,16 +114,6 @@ namespace XiaoMiFlash
             btnBrwDic.Text = "Location";
             btnBrwDic.UseVisualStyleBackColor = true;
             btnBrwDic.Click += new EventHandler(btnBrwDic_Click);
-            //
-            // btnDriver
-            //
-            btnDriver.Location = new Point(96, 31);
-            btnDriver.Name = "btnBrwDic";
-            btnDriver.Size = new Size(75, 23);
-            btnDriver.TabIndex = 1;
-            btnDriver.Text = "Driver";
-            btnDriver.UseVisualStyleBackColor = true;
-            btnDriver.Click += new EventHandler(btnDriver_Click);
             // 
             // fbdSelect
             // 
@@ -282,18 +274,25 @@ namespace XiaoMiFlash
             // miConfiguration
             // 
             miConfiguration.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            miFlashConfigurationToolStripMenuItem});
+            miFlashConfigurationToolStripMenuItem, miInstallDrivers});
             miConfiguration.Name = "miConfiguration";
-            miConfiguration.Size = new System.Drawing.Size(93, 20);
+            miConfiguration.Size = new System.Drawing.Size(93, 40);
             miConfiguration.Text = "Configuration";
             // 
             // miFlashConfigurationToolStripMenuItem
             // 
             miFlashConfigurationToolStripMenuItem.Name = "miFlashConfigurationToolStripMenuItem";
             miFlashConfigurationToolStripMenuItem.Size = new Size(178, 22);
-            miFlashConfigurationToolStripMenuItem.Text = "Konfigurasi MiFlash";
+            miFlashConfigurationToolStripMenuItem.Text = "Configure MiFlash";
             miFlashConfigurationToolStripMenuItem.Click += new EventHandler(miFlashConfigurationToolStripMenuItem_Click);
-            // 
+            //
+            // miInstallDriver
+            //
+            miInstallDrivers.Name = "miInstallDrivers";
+            miInstallDrivers.Size = new Size(178, 22);
+            miInstallDrivers.Text = "Install Drivers";
+            miInstallDrivers.Click += new EventHandler(miInstallDrivers_Click);
+            //
             // MainFrm
             // 
             ClientSize = new Size(1094, 444);
@@ -588,6 +587,11 @@ namespace XiaoMiFlash
         private void miFlashConfigurationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new ConfigurationFrm().Show();
+        }
+
+        private void miInstallDrivers_Click(object sender, EventArgs e)
+        {
+            new DriverFrm().Show();
         }
     }
 }
