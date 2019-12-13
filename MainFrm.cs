@@ -25,7 +25,6 @@ namespace XiaoMiFlash
         private IContainer components;
         private TextBox txtPath;
         private Button btnBrwDic;
-        private Button btnDriver;
         private FolderBrowserDialog fbdSelect;
         private Button btnRefresh;
         private Button btnFlash;
@@ -341,13 +340,6 @@ namespace XiaoMiFlash
         }
 
         private void btnBrwDic_Click(object sender, EventArgs e)
-        {
-            if (fbdSelect.ShowDialog() != DialogResult.OK)
-                return;
-            txtPath.Text = fbdSelect.SelectedPath;
-        }
-
-        private void btnDriver_Click(object sender, EventArgs e)
         {
             if (fbdSelect.ShowDialog() != DialogResult.OK)
                 return;

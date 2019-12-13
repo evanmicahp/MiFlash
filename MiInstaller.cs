@@ -1,6 +1,4 @@
-﻿
-
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using System;
 using System.Collections;
 using System.ComponentModel;
@@ -14,6 +12,7 @@ namespace XiaoMiFlash
     public class MiInstaller : Installer
     {
         private IContainer components;
+        public event EventHandler eventInstall;
 
         public MiInstaller()
         {
@@ -53,6 +52,18 @@ namespace XiaoMiFlash
 
         private void MiInstaller_BeforeInstall(object sender, InstallEventArgs e)
         {
+        }
+
+        public void CopyInstallDrivers()
+        {
+            CopyFiles();
+            InstallAllDriver();
+        }
+
+        protected virtual void eventInstallDrivers(EventArgs e)
+        {
+            EventHandler handler = eventInstall;
+            handler?.Invoke(this, e);
         }
 
         private void CopyFiles()
