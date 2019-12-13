@@ -25,6 +25,7 @@ namespace XiaoMiFlash
         private IContainer components;
         private TextBox txtPath;
         private Button btnBrwDic;
+        private Button btnDriver;
         private FolderBrowserDialog fbdSelect;
         private Button btnRefresh;
         private Button btnFlash;
@@ -65,6 +66,7 @@ namespace XiaoMiFlash
             components = new Container();
             txtPath = new TextBox();
             btnBrwDic = new Button();
+            btnDriver = new Button();
             fbdSelect = new FolderBrowserDialog();
             btnRefresh = new Button();
             btnFlash = new Button();
@@ -107,13 +109,23 @@ namespace XiaoMiFlash
             btnBrwDic.Name = "btnBrwDic";
             btnBrwDic.Size = new Size(75, 23);
             btnBrwDic.TabIndex = 1;
-            btnBrwDic.Text = "Pilih";
+            btnBrwDic.Text = "Location";
             btnBrwDic.UseVisualStyleBackColor = true;
             btnBrwDic.Click += new EventHandler(btnBrwDic_Click);
+            //
+            // btnDriver
+            //
+            btnDriver.Location = new Point(96, 31);
+            btnDriver.Name = "btnBrwDic";
+            btnDriver.Size = new Size(75, 23);
+            btnDriver.TabIndex = 1;
+            btnDriver.Text = "Driver";
+            btnDriver.UseVisualStyleBackColor = true;
+            btnDriver.Click += new EventHandler(btnDriver_Click);
             // 
             // fbdSelect
             // 
-            fbdSelect.Description = "Pilih Folder SW";
+            fbdSelect.Description = "Fastboot ROM";
             // 
             // btnRefresh
             // 
@@ -297,7 +309,7 @@ namespace XiaoMiFlash
             MainMenuStrip = menuStrip1;
             Name = "MainFrm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "XiaoMiFlash(Beta)";
+            Text = "XiaoMiFlash (Beta)";
             FormClosing += new FormClosingEventHandler(MainFrm_FormClosing);
             FormClosed += new FormClosedEventHandler(MainFrm_FormClosed);
             Load += new EventHandler(MainFrm_Load);
@@ -315,15 +327,28 @@ namespace XiaoMiFlash
             return new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator);
         }
 
+        private void CheckAdmin(bool admin)
+        {
+            if (!admin)
+            {
+                Log.w("Not running as admin!");
+            }
+        }
+
         private void MainFrm_Load(object sender, EventArgs e)
         {
             SetLanguage();
             txtPath.Text = MiAppConfig.Get("swPath");
         }
 
-
-
         private void btnBrwDic_Click(object sender, EventArgs e)
+        {
+            if (fbdSelect.ShowDialog() != DialogResult.OK)
+                return;
+            txtPath.Text = fbdSelect.SelectedPath;
+        }
+
+        private void btnDriver_Click(object sender, EventArgs e)
         {
             if (fbdSelect.ShowDialog() != DialogResult.OK)
                 return;
@@ -335,7 +360,7 @@ namespace XiaoMiFlash
             try
             {
                 string command = string.Format("pushd \"{0}\"&&prompt $$&&set PATH=\"{1}\";%PATH%&&\"{2}\" -s {3}&&popd", "F:\\Dev\\mi\\MiFlash\\bin\\Debug\\images", Script.AndroidPath, "flash.bat", "djhgjhgvjh");
-                Log.w("Commad:" + command);
+                Log.w("Command:" + command);
                 btnRefresh.Enabled = false;
                 btnRefresh.Cursor = Cursors.WaitCursor;
                 List<Device> device = UsbDevice.GetDevice();

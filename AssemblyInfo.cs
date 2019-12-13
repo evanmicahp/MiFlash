@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("XiaoMiFlash")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright © 2019")]
 [assembly: AssemblyTitle("XiaoMiFlash")]
 [assembly: AssemblyConfiguration("")]
 [assembly: ComVisible(false)]
