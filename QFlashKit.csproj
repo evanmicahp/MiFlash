@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!--Project was exported from assembly: C:\XiaoMi\XiaoMiFlash\XiaoMiFlash.exe-->
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CFC5F2A4-AF68-42AB-904C-C3442E683215}</ProjectGuid>
+    <ProjectGuid>{CD5324D7-6F78-45A4-B4F7-4FDCE9816A90}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AssemblyName>QFlashKit</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <RootNamespace>XiaoMiFlash</RootNamespace>
+    <RootNamespace>QFlashKit</RootNamespace>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -63,6 +62,11 @@
   <ItemGroup>
     <Compile Include="form\ConfirmInstall.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ConfirmInstall.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConfirmInstall.resx</DependentUpon>
     </Compile>
     <Compile Include="form\DriverFrm.cs" />
     <Compile Include="MiInstaller.cs">
@@ -132,6 +136,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="form\ConfigurationFrm.resx" />
+    <EmbeddedResource Include="form\ConfirmInstall.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConfirmInstall.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\ProcessFrm.resx" />
     <EmbeddedResource Include="MainFrm.resx" />
     <EmbeddedResource Include="Properties\Resources.resx" />
