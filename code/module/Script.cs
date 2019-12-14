@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace XiaoMiFlash.code.module
+namespace QFlashKit.code.module
 {
   public class Script
   {

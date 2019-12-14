@@ -3,7 +3,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace XiaoMiFlash.code.Utility
+namespace QFlashKit.code.Utility
 {
   public class CommandFormat
   {

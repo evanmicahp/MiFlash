@@ -3,7 +3,7 @@
 using System;
 using System.Xml;
 
-namespace XiaoMiFlash.code.lan
+namespace QFlashKit.code.lan
 {
   public class LanguageProvider
   {

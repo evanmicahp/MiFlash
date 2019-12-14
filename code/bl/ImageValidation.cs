@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 
-namespace XiaoMiFlash.code.bl
+namespace QFlashKit.code.bl
 {
   public class ImageValidation
   {

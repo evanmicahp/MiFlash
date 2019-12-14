@@ -1,8 +1,8 @@
 ﻿
 using System;
-using XiaoMiFlash.code.bl;
+using QFlashKit.code.bl;
 
-namespace XiaoMiFlash.code.module
+namespace QFlashKit.code.module
 {
     public class Device
     {

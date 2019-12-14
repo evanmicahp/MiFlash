@@ -4,9 +4,9 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using XiaoMiFlash.code.Utility;
+using QFlashKit.code.Utility;
 
-namespace XiaoMiFlash.form
+namespace QFlashKit.form
 {
     public class ConfigurationFrm : Form
     {

@@ -4,10 +4,10 @@ using System.Drawing;
 using System.Collections;
 using System.Collections.Specialized;
 using System.Windows.Forms;
-using XiaoMiFlash.code.Utility;
-using XiaoMiFlash;
+using QFlashKit.code.Utility;
+using QFlashKit;
 
-namespace XiaoMiFlash.form
+namespace QFlashKit.form
 {
     public class DriverFrm : Form
     {
@@ -15,7 +15,6 @@ namespace XiaoMiFlash.form
         private IContainer component;
         private GroupBox driversBox;
         private Button installBtn;
-        private IDictionary idict;
 
         public DriverFrm()
         {

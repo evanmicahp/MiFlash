@@ -1,6 +1,6 @@
 ﻿
 
-namespace XiaoMiFlash.code.bl
+namespace QFlashKit.code.bl
 {
   public abstract class DeviceCtrl
   {

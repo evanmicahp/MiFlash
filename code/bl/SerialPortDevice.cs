@@ -12,11 +12,11 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Xml;
-using XiaoMiFlash.code.data;
-using XiaoMiFlash.code.module;
-using XiaoMiFlash.code.Utility;
+using QFlashKit.code.data;
+using QFlashKit.code.module;
+using QFlashKit.code.Utility;
 
-namespace XiaoMiFlash.code.bl
+namespace QFlashKit.code.bl
 {
     public class SerialPortDevice : DeviceCtrl
     {

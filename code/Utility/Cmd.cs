@@ -4,10 +4,10 @@ using System;
 using System.Collections;
 using System.Diagnostics;
 using System.Text;
-using XiaoMiFlash.code.data;
-using XiaoMiFlash.code.module;
+using QFlashKit.code.data;
+using QFlashKit.code.module;
 
-namespace XiaoMiFlash.code.Utility
+namespace QFlashKit.code.Utility
 {
   public class Cmd
   {

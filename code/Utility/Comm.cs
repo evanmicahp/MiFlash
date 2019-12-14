@@ -7,9 +7,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Xml;
-using XiaoMiFlash.code.data;
+using QFlashKit.code.data;
 
-namespace XiaoMiFlash.code.Utility
+namespace QFlashKit.code.Utility
 {
   public class Comm
   {

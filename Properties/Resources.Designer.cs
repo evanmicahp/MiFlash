@@ -1,8 +1,8 @@
 ﻿// Decompiled with JetBrains decompiler
-// Type: XiaoMiFlash.Properties.Resources
-// Assembly: XiaoMiFlash, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Type: QFlashKit.Properties.Resources
+// Assembly: QFlashKit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: BC1A28B0-F0EB-4D8A-87A7-1C7E69B878B5
-// Assembly location: C:\XiaoMi\XiaoMiFlash\XiaoMiFlash.exe
+// Assembly location: C:\XiaoMi\QFlashKit\QFlashKit.exe
 
 using System.CodeDom.Compiler;
 using System.ComponentModel;
@@ -11,7 +11,7 @@ using System.Globalization;
 using System.Resources;
 using System.Runtime.CompilerServices;
 
-namespace XiaoMiFlash.Properties
+namespace QFlashKit.Properties
 {
   [GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
   [DebuggerNonUserCode]
@@ -26,9 +26,9 @@ namespace XiaoMiFlash.Properties
     {
       get
       {
-        if (object.ReferenceEquals((object) XiaoMiFlash.Properties.Resources.resourceMan, (object) null))
-          XiaoMiFlash.Properties.Resources.resourceMan = new ResourceManager("XiaoMiFlash.Properties.Resources", typeof (XiaoMiFlash.Properties.Resources).Assembly);
-        return XiaoMiFlash.Properties.Resources.resourceMan;
+        if (object.ReferenceEquals((object) Resources.resourceMan, (object) null))
+          Resources.resourceMan = new ResourceManager("QFlashKit.Properties.Resources", typeof (Resources).Assembly);
+        return Resources.resourceMan;
       }
     }
 
@@ -37,11 +37,11 @@ namespace XiaoMiFlash.Properties
     {
       get
       {
-        return XiaoMiFlash.Properties.Resources.resourceCulture;
+        return Resources.resourceCulture;
       }
       set
       {
-        XiaoMiFlash.Properties.Resources.resourceCulture = value;
+        Resources.resourceCulture = value;
       }
     }
 
@@ -49,7 +49,7 @@ namespace XiaoMiFlash.Properties
     {
       get
       {
-        return XiaoMiFlash.Properties.Resources.ResourceManager.GetString("txtPath", XiaoMiFlash.Properties.Resources.resourceCulture);
+        return Resources.ResourceManager.GetString("txtPath", Resources.resourceCulture);
       }
     }
 

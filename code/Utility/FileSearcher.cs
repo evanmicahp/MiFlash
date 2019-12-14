@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace XiaoMiFlash.code.Utility
+namespace QFlashKit.code.Utility
 {
   public class FileSearcher
   {

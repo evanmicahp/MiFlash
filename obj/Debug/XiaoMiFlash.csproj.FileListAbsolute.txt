@@ -29,3 +29,15 @@ F:\Dev\mi\MiFlash\obj\Debug\XiaoMiFlash.MainFrm.resources
 F:\Dev\mi\MiFlash\obj\Debug\XiaoMiFlash.Properties.Resources.resources
 F:\Dev\mi\MiFlash\obj\Debug\XiaoMiFlash.csproj.GenerateResource.Cache
 F:\Dev\mi\MiFlash\obj\Debug\XiaoMiFlash.csprojResolveAssemblyReference.cache
+D:\Projects\UnbrickMi8\MiFlash_mrivai\bin\Debug\XiaoMiFlash.exe
+D:\Projects\UnbrickMi8\MiFlash_mrivai\bin\Debug\XiaoMiFlash.pdb
+D:\Projects\UnbrickMi8\MiFlash_mrivai\obj\Debug\XiaoMiFlash.csprojAssemblyReference.cache
+D:\Projects\UnbrickMi8\MiFlash_mrivai\obj\Debug\XiaoMiFlash.form.ConfigurationFrm.resources
+D:\Projects\UnbrickMi8\MiFlash_mrivai\obj\Debug\XiaoMiFlash.form.ProcessFrm.resources
+D:\Projects\UnbrickMi8\MiFlash_mrivai\obj\Debug\XiaoMiFlash.MainFrm.resources
+D:\Projects\UnbrickMi8\MiFlash_mrivai\obj\Debug\XiaoMiFlash.Properties.Resources.resources
+D:\Projects\UnbrickMi8\MiFlash_mrivai\obj\Debug\XiaoMiFlash.csproj.GenerateResource.cache
+D:\Projects\UnbrickMi8\MiFlash_mrivai\obj\Debug\XiaoMiFlash.csproj.CoreCompileInputs.cache
+D:\Projects\UnbrickMi8\MiFlash_mrivai\obj\Debug\XiaoMiFlash.exe
+D:\Projects\UnbrickMi8\MiFlash_mrivai\obj\Debug\XiaoMiFlash.pdb
+D:\Projects\UnbrickMi8\MiFlash_mrivai\obj\Debug\XiaoMiFlash.form.ConfirmInstallFrm.resources

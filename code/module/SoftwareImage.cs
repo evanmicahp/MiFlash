@@ -2,7 +2,7 @@
 
 using System.Collections;
 
-namespace XiaoMiFlash.code.module
+namespace QFlashKit.code.module
 {
     public class SoftwareImage
     {

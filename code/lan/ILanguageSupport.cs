@@ -1,6 +1,6 @@
 ﻿
 
-namespace XiaoMiFlash.code.lan
+namespace QFlashKit.code.lan
 {
   public interface ILanguageSupport
   {

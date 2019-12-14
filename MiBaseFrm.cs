@@ -1,9 +1,9 @@
 ﻿
 
 using System.Windows.Forms;
-using XiaoMiFlash.code.lan;
+using QFlashKit.code.lan;
 
-namespace XiaoMiFlash
+namespace QFlashKit
 {
   public class MiBaseFrm : Form, ILanguageSupport
   {

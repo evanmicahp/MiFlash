@@ -1,9 +1,9 @@
 ﻿
 
 using System.Collections.Generic;
-using XiaoMiFlash.code.module;
+using QFlashKit.code.module;
 
-namespace XiaoMiFlash.code.data
+namespace QFlashKit.code.data
 {
   public static class FlashingDevice
   {

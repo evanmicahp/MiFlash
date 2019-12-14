@@ -6,9 +6,9 @@ using System.IO;
 using System.Management;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using XiaoMiFlash.code.module;
+using QFlashKit.code.module;
 
-namespace XiaoMiFlash.code.Utility
+namespace QFlashKit.code.Utility
 {
   public class ComPortCtrl
   {

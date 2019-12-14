@@ -7,10 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
-using XiaoMiFlash.code.bl;
-using XiaoMiFlash.code.module;
+using QFlashKit.code.bl;
+using QFlashKit.code.module;
 
-namespace XiaoMiFlash.code.Utility
+namespace QFlashKit.code.Utility
 {
   public class UsbDevice
   {

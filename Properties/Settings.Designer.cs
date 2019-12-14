@@ -1,15 +1,15 @@
 ﻿// Decompiled with JetBrains decompiler
-// Type: XiaoMiFlash.Properties.Settings
-// Assembly: XiaoMiFlash, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Type: QFlashKit.Properties.Settings
+// Assembly: QFlashKit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: BC1A28B0-F0EB-4D8A-87A7-1C7E69B878B5
-// Assembly location: C:\XiaoMi\XiaoMiFlash\XiaoMiFlash.exe
+// Assembly location: C:\XiaoMi\QFlashKit\QFlashKit.exe
 
 using System.CodeDom.Compiler;
 using System.Configuration;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-namespace XiaoMiFlash.Properties
+namespace QFlashKit.Properties
 {
   [GeneratedCode("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "10.0.0.0")]
   [CompilerGenerated]

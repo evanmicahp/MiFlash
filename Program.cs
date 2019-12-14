@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace XiaoMiFlash
+namespace QFlashKit
 {
   internal static class Program
   {

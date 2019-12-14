@@ -2,7 +2,7 @@
 
 using System.Runtime.InteropServices;
 
-namespace XiaoMiFlash.code.module
+namespace QFlashKit.code.module
 {
   [StructLayout(LayoutKind.Sequential, Pack = 1)]
   public struct sahara_hello_packet

@@ -1,6 +1,6 @@
 ﻿
 
-namespace XiaoMiFlash.code.Utility
+namespace QFlashKit.code.Utility
 {
   public enum OemCopyStyle
   {

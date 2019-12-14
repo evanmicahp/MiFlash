@@ -9,15 +9,15 @@ using System.Security.Principal;
 using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Forms.Layout;
-using XiaoMiFlash.code.bl;
-using XiaoMiFlash.code.data;
-using XiaoMiFlash.code.lan;
-using XiaoMiFlash.code.MiControl;
-using XiaoMiFlash.code.module;
-using XiaoMiFlash.code.Utility;
-using XiaoMiFlash.form;
+using QFlashKit.code.bl;
+using QFlashKit.code.data;
+using QFlashKit.code.lan;
+using QFlashKit.code.miControl;
+using QFlashKit.code.module;
+using QFlashKit.code.Utility;
+using QFlashKit.form;
 
-namespace XiaoMiFlash
+namespace QFlashKit
 {
     public class MainFrm : MiBaseFrm
     {
@@ -307,7 +307,7 @@ namespace XiaoMiFlash
             MainMenuStrip = menuStrip1;
             Name = "MainFrm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "XiaoMiFlash (Beta)";
+            Text = "QFlashKit (Beta)";
             FormClosing += new FormClosingEventHandler(MainFrm_FormClosing);
             FormClosed += new FormClosedEventHandler(MainFrm_FormClosed);
             Load += new EventHandler(MainFrm_Load);

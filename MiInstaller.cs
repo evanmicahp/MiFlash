@@ -4,9 +4,9 @@ using System.Collections;
 using System.ComponentModel;
 using System.Configuration.Install;
 using System.IO;
-using XiaoMiFlash.code.Utility;
+using QFlashKit.code.Utility;
 
-namespace XiaoMiFlash
+namespace QFlashKit
 {
     [RunInstaller(true)]
     public class MiInstaller : Installer

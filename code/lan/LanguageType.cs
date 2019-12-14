@@ -2,7 +2,7 @@
 
 using System.Runtime.InteropServices;
 
-namespace XiaoMiFlash.code.lan
+namespace QFlashKit.code.lan
 {
   [StructLayout(LayoutKind.Sequential, Size = 1)]
   public struct LanguageType

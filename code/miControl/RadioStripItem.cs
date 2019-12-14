@@ -1,9 +1,7 @@
-﻿
-
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
-namespace XiaoMiFlash.code.MiControl
+namespace QFlashKit.code.miControl
 {
   [ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.MenuStrip | ToolStripItemDesignerAvailability.ContextMenuStrip | ToolStripItemDesignerAvailability.StatusStrip)]
   public class RadioStripItem : ToolStripControlHost

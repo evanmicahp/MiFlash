@@ -4,7 +4,7 @@ using System.Configuration;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace XiaoMiFlash.code.Utility
+namespace QFlashKit.code.Utility
 {
   public class MiAppConfig
   {

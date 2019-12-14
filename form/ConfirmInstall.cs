@@ -1,9 +1,9 @@
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-using XiaoMiFlash.form;
+using QFlashKit.form;
 
-namespace XiaoMiFlash.form
+namespace QFlashKit.form
 {
     public class ConfirmInstallFrm : Form
     {

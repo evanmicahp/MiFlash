@@ -4,11 +4,11 @@
 
 //for flash rom via fastboot
 using System;
-using XiaoMiFlash.code.data;
-using XiaoMiFlash.code.module;
-using XiaoMiFlash.code.Utility;
+using QFlashKit.code.data;
+using QFlashKit.code.module;
+using QFlashKit.code.Utility;
 
-namespace XiaoMiFlash.code.bl
+namespace QFlashKit.code.bl
 {
   public class ScriptDevice : DeviceCtrl
   {

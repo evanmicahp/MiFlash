@@ -3,7 +3,7 @@
 
 using System.Runtime.InteropServices;
 
-namespace XiaoMiFlash.code.module
+namespace QFlashKit.code.module
 {
   [StructLayout(LayoutKind.Sequential, Size = 1)]
   public struct Storage
