@@ -1,6 +1,4 @@
-﻿
-
-using System.Collections;
+﻿using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
@@ -28,10 +26,10 @@ namespace QFlashKit.form
 
         private void InitializeComponent()
         {
-            ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(ProcessFrm));
+            var componentResourceManager = new ComponentResourceManager(typeof(ProcessFrm));
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            ((ISupportInitialize)pictureBox1).BeginInit();
+            ((ISupportInitialize) pictureBox1).BeginInit();
             SuspendLayout();
             label1.AutoSize = true;
             label1.Location = new Point(91, 29);
@@ -39,7 +37,7 @@ namespace QFlashKit.form
             label1.Size = new Size(89, 12);
             label1.TabIndex = 0;
             label1.Text = "MD5 validation";
-            pictureBox1.Image = (Image)componentResourceManager.GetObject("pictureBox1.Image");
+            pictureBox1.Image = (Image) componentResourceManager.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(103, 92);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(100, 50);
@@ -57,7 +55,7 @@ namespace QFlashKit.form
             StartPosition = FormStartPosition.CenterScreen;
             Text = "processFrm";
             TopMost = true;
-            ((ISupportInitialize)pictureBox1).EndInit();
+            ((ISupportInitialize) pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

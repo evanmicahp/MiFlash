@@ -1,15 +1,13 @@
-﻿
-
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
 namespace QFlashKit.code.module
 {
-  [StructLayout(LayoutKind.Sequential, Pack = 1)]
-  public struct SparseChunkHeader
-  {
-    public ushort uChunkType;
-    public ushort uReserved1;
-    public uint uChunkSize;
-    public uint uTotalSize;
-  }
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    public struct SparseChunkHeader
+    {
+        public ushort uChunkType;
+        public ushort uReserved1;
+        public uint uChunkSize;
+        public uint uTotalSize;
+    }
 }

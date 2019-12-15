@@ -1,25 +1,21 @@
 using System;
 using System.ComponentModel;
 using System.Drawing;
-using System.Collections;
-using System.Collections.Specialized;
 using System.Windows.Forms;
-using QFlashKit.code.Utility;
-using QFlashKit;
 
 namespace QFlashKit.form
 {
     public class DriverFrm : Form
     {
-        private MiInstaller installer;
         private IContainer component;
         private GroupBox driversBox;
         private Button installBtn;
+        private MiInstaller installer;
 
         public DriverFrm()
         {
             InitializeComponent();
-            installer.eventInstall += DriverFrm_Load;
+            installer.EventInstall += DriverFrm_Load;
         }
 
         private void InitializeComponent()
@@ -36,32 +32,32 @@ namespace QFlashKit.form
             //
             // driversBox
             //
-            driversBox.Controls.Add(this.installBtn);
-            driversBox.Location = new System.Drawing.Point(32, 26);
+            driversBox.Controls.Add(installBtn);
+            driversBox.Location = new Point(32, 26);
             driversBox.Name = "driversBox";
-            driversBox.Size = new System.Drawing.Size(417, 266);
+            driversBox.Size = new Size(417, 266);
             driversBox.TabIndex = 0;
             driversBox.TabStop = false;
             driversBox.Text = "Install Drivers";
             //
             // installBtn
             //
-            installBtn.Location = new System.Drawing.Point(332, 233);
+            installBtn.Location = new Point(332, 233);
             installBtn.Name = "installBtn";
-            installBtn.Size = new System.Drawing.Size(80, 27);
+            installBtn.Size = new Size(80, 27);
             installBtn.TabIndex = 1;
             installBtn.Text = "Install";
             installBtn.UseVisualStyleBackColor = true;
-            installBtn.Click += new EventHandler(ConfirmInstall);
+            installBtn.Click += ConfirmInstall;
             //
             // Form1
             //
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            ClientSize = new System.Drawing.Size(489, 326);
-            Controls.Add(this.driversBox);
+            AutoScaleMode = AutoScaleMode.Inherit;
+            ClientSize = new Size(489, 326);
+            Controls.Add(driversBox);
             Name = "Form1";
             Text = "Install Drivers";
-            Load += new System.EventHandler(this.DriverFrm_Load);
+            Load += DriverFrm_Load;
             driversBox.ResumeLayout(false);
             ResumeLayout(false);
         }

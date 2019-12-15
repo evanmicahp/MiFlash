@@ -1,28 +1,14 @@
-﻿
-
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using QFlashKit.code.lan;
 
 namespace QFlashKit
 {
-  public class MiBaseFrm : Form, ILanguageSupport
-  {
-    private string lanid = "";
-
-    public string LanID
+    public class MiBaseFrm : Form, ILanguageSupport
     {
-      get
-      {
-        return this.lanid;
-      }
-      set
-      {
-        this.lanid = value;
-      }
-    }
+        public string LanID { get; set; } = "";
 
-    public virtual void SetLanguage()
-    {
+        public virtual void SetLanguage()
+        {
+        }
     }
-  }
 }

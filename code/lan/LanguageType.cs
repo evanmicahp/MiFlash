@@ -1,14 +1,12 @@
-﻿
-
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
 namespace QFlashKit.code.lan
 {
-  [StructLayout(LayoutKind.Sequential, Size = 1)]
-  public struct LanguageType
-  {
-    public static string chn_s = "CHN_S";
-    public static string chn_t = "CHN_T";
-    public static string eng = "ENG";
-  }
+    [StructLayout(LayoutKind.Sequential, Size = 1)]
+    public struct LanguageType
+    {
+        public static string chn_s = "CHN_S";
+        public static string chn_t = "CHN_T";
+        public static string eng = "ENG";
+    }
 }

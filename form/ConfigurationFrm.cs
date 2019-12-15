@@ -1,7 +1,4 @@
-﻿
-
-using System;
-using System.ComponentModel;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using QFlashKit.code.Utility;
@@ -33,14 +30,14 @@ namespace QFlashKit.form
             chkMD5.TabIndex = 0;
             chkMD5.Text = "check MD5 before flash";
             chkMD5.UseVisualStyleBackColor = true;
-            chkMD5.CheckedChanged += new EventHandler(chkMD5_CheckedChanged);
+            chkMD5.CheckedChanged += chkMD5_CheckedChanged;
             AutoScaleDimensions = new SizeF(6f, 12f);
             ClientSize = new Size(548, 282);
             Controls.Add(chkMD5);
             Name = "ConfigurationFrm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Configuration";
-            Load += new EventHandler(ConfigurationFrm_Load);
+            Load += ConfigurationFrm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

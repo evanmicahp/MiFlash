@@ -3,27 +3,23 @@ using System.Windows.Forms.Design;
 
 namespace QFlashKit.code.miControl
 {
-  [ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.MenuStrip | ToolStripItemDesignerAvailability.ContextMenuStrip | ToolStripItemDesignerAvailability.StatusStrip)]
-  public class RadioStripItem : ToolStripControlHost
-  {
-    private RadioButton radio;
-
-    public bool IsChecked
+    [ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.MenuStrip |
+                                       ToolStripItemDesignerAvailability.ContextMenuStrip |
+                                       ToolStripItemDesignerAvailability.StatusStrip)]
+    public class RadioStripItem : ToolStripControlHost
     {
-      get
-      {
-        return radio.Checked;
-      }
-      set
-      {
-        radio.Checked = value;
-      }
-    }
+        private readonly RadioButton radio;
 
-    public RadioStripItem()
-      : base(new RadioButton())
-    {
-      radio = Control as RadioButton;
+        public RadioStripItem()
+            : base(new RadioButton())
+        {
+            radio = Control as RadioButton;
+        }
+
+        public bool IsChecked
+        {
+            get => radio.Checked;
+            set => radio.Checked = value;
+        }
     }
-  }
 }

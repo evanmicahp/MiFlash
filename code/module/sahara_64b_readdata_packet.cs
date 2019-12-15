@@ -1,16 +1,14 @@
-﻿
-
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
 namespace QFlashKit.code.module
 {
-  [StructLayout(LayoutKind.Sequential, Pack = 1)]
-  public struct sahara_64b_readdata_packet
-  {
-    public uint Command;
-    public uint Length;
-    public ulong Image_id;
-    public ulong Offset;
-    public ulong SLength;
-  }
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    public struct sahara_64b_readdata_packet
+    {
+        public uint Command;
+        public uint Length;
+        public ulong Image_id;
+        public ulong Offset;
+        public ulong SLength;
+    }
 }

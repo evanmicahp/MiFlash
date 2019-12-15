@@ -63,12 +63,9 @@
     <Compile Include="form\ConfirmInstall.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\ConfirmInstall.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ConfirmInstall.resx</DependentUpon>
+    <Compile Include="form\DriverFrm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\DriverFrm.cs" />
     <Compile Include="MiInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -136,10 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="form\ConfigurationFrm.resx" />
-    <EmbeddedResource Include="form\ConfirmInstall.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ConfirmInstall.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <EmbeddedResource Include="form\ConfirmInstall.resx" />
     <EmbeddedResource Include="form\ProcessFrm.resx" />
     <EmbeddedResource Include="MainFrm.resx" />
     <EmbeddedResource Include="Properties\Resources.resx" />

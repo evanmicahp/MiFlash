@@ -1,10 +1,8 @@
-﻿
-
-namespace QFlashKit.code.Utility
+﻿namespace QFlashKit.code.Utility
 {
-  public enum SetupUOInfFlags : uint
-  {
-    NONE,
-    SUOI_FORCEDELETE,
-  }
+    public enum SetupUOInfFlags : uint
+    {
+        NONE,
+        SUOI_FORCEDELETE
+    }
 }

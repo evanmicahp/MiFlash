@@ -2,14 +2,16 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
+// TODO localize strings
+
 namespace QFlashKit.form
 {
     public class ConfirmInstallFrm : Form
     {
-        private Label _label1;
-        private Button _button2;
         private Button _button1;
-        
+        private Button _button2;
+        private Label _label1;
+
         public ConfirmInstallFrm()
         {
             InitializeComponent();

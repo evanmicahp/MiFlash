@@ -1,11 +1,9 @@
-﻿
-
-namespace QFlashKit.code.lan
+﻿namespace QFlashKit.code.lan
 {
-  public interface ILanguageSupport
-  {
-    string LanID { get; set; }
+    public interface ILanguageSupport
+    {
+        string LanID { get; set; }
 
-    void SetLanguage();
-  }
+        void SetLanguage();
+    }
 }

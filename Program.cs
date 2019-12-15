@@ -3,14 +3,14 @@ using System.Windows.Forms;
 
 namespace QFlashKit
 {
-  internal static class Program
-  {
-    [STAThread]
-    private static void Main()
+    internal static class Program
     {
-      Application.EnableVisualStyles();
-      Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run((Form) new MainFrm());
+        [STAThread]
+        private static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainFrm());
+        }
     }
-  }
 }

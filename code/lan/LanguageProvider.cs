@@ -1,36 +1,34 @@
-﻿
-
-using System;
+﻿using System;
 using System.Xml;
 
 namespace QFlashKit.code.lan
 {
-  public class LanguageProvider
-  {
-    private string languageType = "";
-
-    public LanguageProvider(string lanType)
+    public class LanguageProvider
     {
-      this.languageType = lanType;
-    }
+        private readonly string languageType = "";
 
-    public string GetLanguage(string ctrlID)
-    {
-      XmlDocument xmlDocument = new XmlDocument();
-      new XmlReaderSettings().IgnoreComments = true;
-      XmlReader reader = XmlReader.Create(AppDomain.CurrentDomain.SetupInformation.ApplicationBase + "Source\\LanguageLibrary.xml");
-      xmlDocument.Load(reader);
-      XmlNodeList childNodes = xmlDocument.SelectSingleNode("LanguageLibrary").ChildNodes;
-      string str = "";
-      foreach (XmlElement xmlElement in childNodes)
-      {
-        if (!(xmlElement.Name.ToLower() != "lan") && xmlElement.Attributes["CTRLID"].Value == ctrlID)
+        public LanguageProvider(string lanType)
         {
-          str = xmlElement.Attributes[languageType].Value;
-          break;
+            languageType = lanType;
         }
-      }
-      return str;
+
+        public string GetLanguage(string ctrlID)
+        {
+            var xmlDocument = new XmlDocument();
+            new XmlReaderSettings().IgnoreComments = true;
+            var reader = XmlReader.Create(AppDomain.CurrentDomain.SetupInformation.ApplicationBase +
+                                          "Source\\LanguageLibrary.xml");
+            xmlDocument.Load(reader);
+            var childNodes = xmlDocument.SelectSingleNode("LanguageLibrary").ChildNodes;
+            var str = "";
+            foreach (XmlElement xmlElement in childNodes)
+                if (!(xmlElement.Name.ToLower() != "lan") && xmlElement.Attributes["CTRLID"].Value == ctrlID)
+                {
+                    str = xmlElement.Attributes[languageType].Value;
+                    break;
+                }
+
+            return str;
+        }
     }
-  }
 }
