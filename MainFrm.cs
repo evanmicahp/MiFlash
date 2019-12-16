@@ -354,8 +354,10 @@ namespace QFlashKit
         {
             try
             {
+                // var command = string.Format("pushd \"{0}\"&&prompt $$&&set PATH=\"{1}\";%PATH%&&\"{2}\" -s {3}&&popd",
+                //    "F:\\Dev\\mi\\MiFlash\\bin\\Debug\\images", Script.AndroidPath, "flash.bat", "djhgjhgvjh"); // TODO check if this should be _txtPath
                 var command = string.Format("pushd \"{0}\"&&prompt $$&&set PATH=\"{1}\";%PATH%&&\"{2}\" -s {3}&&popd",
-                    "F:\\Dev\\mi\\MiFlash\\bin\\Debug\\images", Script.AndroidPath, "flash.bat", "djhgjhgvjh");
+                    _txtPath.Text, Script.AndroidPath, "flash.bat", "djhgjhgvjh");
                 Log.w("Command:" + command);
                 _btnRefresh.Enabled = false;
                 _btnRefresh.Cursor = Cursors.WaitCursor;
@@ -554,8 +556,8 @@ namespace QFlashKit
 
         private void MainFrm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Environment.Exit(Environment.ExitCode);
             Dispose();
+            Environment.Exit(Environment.ExitCode);
         }
 
         public override void SetLanguage()

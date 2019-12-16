@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -6,6 +7,8 @@ namespace QFlashKit.code.Utility
 {
     public class MiAppConfig
     {
+        private static String _exePath = Application.ExecutablePath.Replace(".exe", String.Empty);
+
         public static void Add(string key, string value)
         {
             var configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -16,7 +19,7 @@ namespace QFlashKit.code.Utility
         public static void SetValue(string AppKey, string AppValue)
         {
             var xmlDocument = new XmlDocument();
-            xmlDocument.Load(Application.ExecutablePath + ".config");
+            xmlDocument.Load(_exePath + ".config");
             var xmlNode = xmlDocument.SelectSingleNode("//appSettings");
             var xmlElement = (XmlElement) xmlNode.SelectSingleNode("//add[@key='" + AppKey + "']");
             if (xmlElement != null)
@@ -31,14 +34,14 @@ namespace QFlashKit.code.Utility
                 xmlNode.AppendChild(element);
             }
 
-            xmlDocument.Save(Application.ExecutablePath + ".config");
+            xmlDocument.Save(_exePath + ".config");
             ConfigurationManager.RefreshSection(AppKey);
         }
 
         public static string GetAppConfig(string appKey)
         {
             var xmlDocument = new XmlDocument();
-            xmlDocument.Load(Application.ExecutablePath + ".config");
+            xmlDocument.Load(_exePath + ".config");
             var xmlElement = (XmlElement) xmlDocument.SelectSingleNode("//appSettings")
                 .SelectSingleNode("//add[@key='" + appKey + "']");
             if (xmlElement != null)

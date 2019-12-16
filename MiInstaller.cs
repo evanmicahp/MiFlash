@@ -120,7 +120,7 @@ namespace QFlashKit
         {
             try
             {
-                var str1 = "Software\\XiaoMi\\MiFlash\\"; // TODO rename this
+                var str1 = "Software\\QFlashKit\\QFlashKit\\"; // TODO rename this
                 var fileInfo = new FileInfo(infPath);
                 var localMachine = Registry.LocalMachine;
                 var registryKey = localMachine.OpenSubKey(str1, true);

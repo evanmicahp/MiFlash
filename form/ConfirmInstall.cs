@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using QFlashKit;
 
 // TODO localize strings
 
@@ -11,6 +12,7 @@ namespace QFlashKit.form
         private Button _button1;
         private Button _button2;
         private Label _label1;
+        private MiInstaller _installer = new MiInstaller();
 
         public ConfirmInstallFrm()
         {
@@ -33,6 +35,7 @@ namespace QFlashKit.form
             _button1.TabIndex = 0;
             _button1.Text = "Install";
             _button1.UseVisualStyleBackColor = true;
+            _button1.Click += InstallDrivers;
             //
             // _button2
             //
@@ -71,6 +74,11 @@ namespace QFlashKit.form
         private void CloseWindow(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void InstallDrivers(object sender, EventArgs e)
+        {
+            _installer.CopyInstallDrivers();
         }
     }
 }
