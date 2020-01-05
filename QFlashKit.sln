@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -12,6 +12,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CD5324D7-6F78-45A4-B4F7-4FDCE9816A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CD5324D7-6F78-45A4-B4F7-4FDCE9816A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD5324D7-6F78-45A4-B4F7-4FDCE9816A90}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD5324D7-6F78-45A4-B4F7-4FDCE9816A90}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

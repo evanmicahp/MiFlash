@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration.Install;
 using System.IO;
@@ -12,6 +13,15 @@ namespace QFlashKit
     public class MiInstaller : Installer
     {
         private IContainer components;
+
+        private String[] strArray = new string[5]
+        {
+            "Google\\Driver\\android_winusb.inf",
+            "Nvidia\\Driver\\NvidiaUsb.inf",
+            "Microsoft\\Driver\\tetherxp.inf",
+            "Microsoft\\Driver\\wpdmtphw.inf",
+            "Qualcomm\\Driver\\qcser.inf"
+        };
 
         public MiInstaller()
         {
@@ -100,14 +110,6 @@ namespace QFlashKit
         {
             var parameter = Context.Parameters["assemblypath"];
             var installationPath = parameter.Substring(0, parameter.LastIndexOf('\\') + 1);
-            var strArray = new string[5]
-            {
-                "Google\\Driver\\android_winusb.inf",
-                "Nvidia\\Driver\\NvidiaUsb.inf",
-                "Microsoft\\Driver\\tetherxp.inf",
-                "Microsoft\\Driver\\wpdmtphw.inf",
-                "Qualcomm\\Driver\\qcser.inf"
-            };
             var path = installationPath + "Source\\ThirdParty\\";
             if (new DirectoryInfo(path).Exists)
                 for (var index = 0; index < strArray.Length; ++index)
@@ -167,6 +169,17 @@ namespace QFlashKit
             {
                 Log.Installw(installationPath, string.Format("install driver {0}, exception:{1}", infPath, ex.Message));
             }
+        }
+
+        public List<String> GetDriverNames()
+        {
+            List<String> strlist = new List<string>();
+            foreach (var str in strArray)
+            {
+                strlist.Add(str);
+            }
+
+            return strlist;
         }
     }
 }

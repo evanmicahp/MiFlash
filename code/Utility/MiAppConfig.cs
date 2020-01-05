@@ -16,26 +16,26 @@ namespace QFlashKit.code.Utility
             configuration.Save();
         }
 
-        public static void SetValue(string AppKey, string AppValue)
+        public static void SetValue(string appKey, string appValue)
         {
             var xmlDocument = new XmlDocument();
             xmlDocument.Load(_exePath + ".config");
             var xmlNode = xmlDocument.SelectSingleNode("//appSettings");
-            var xmlElement = (XmlElement) xmlNode.SelectSingleNode("//add[@key='" + AppKey + "']");
+            var xmlElement = (XmlElement) xmlNode.SelectSingleNode("//add[@key='" + appKey + "']");
             if (xmlElement != null)
             {
-                xmlElement.SetAttribute("value", AppValue);
+                xmlElement.SetAttribute("value", appValue);
             }
             else
             {
                 var element = xmlDocument.CreateElement("add");
-                element.SetAttribute("key", AppKey);
-                element.SetAttribute("value", AppValue);
+                element.SetAttribute("key", appKey);
+                element.SetAttribute("value", appValue);
                 xmlNode.AppendChild(element);
             }
 
             xmlDocument.Save(_exePath + ".config");
-            ConfigurationManager.RefreshSection(AppKey);
+            ConfigurationManager.RefreshSection(appKey);
         }
 
         public static string GetAppConfig(string appKey)

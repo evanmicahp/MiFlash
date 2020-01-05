@@ -1,64 +1,72 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using QFlashKit;
 
 namespace QFlashKit.form
 {
     public class DriverFrm : Form
     {
+        private ListBox _driverListBox = new ListBox();
         private IContainer component;
-        private GroupBox driversBox;
-        private Button installBtn;
-        private MiInstaller installer;
+        private GroupBox _driversBox;
+        private Button _installBtn;
+        private static MiInstaller _installer;
+        private List<String> _driverName = _installer.GetDriverNames();
 
         public DriverFrm()
         {
             InitializeComponent();
-            installer.EventInstall += DriverFrm_Load;
+            _installer.EventInstall += DriverFrm_Load;
         }
 
         private void InitializeComponent()
         {
-            driversBox = new GroupBox();
-            installBtn = new Button();
+            _driversBox = new GroupBox();
+            _installBtn = new Button();
             SuspendLayout();
-            driversBox.Text = "Install Drivers";
-            driversBox.FlatStyle = FlatStyle.Flat;
-            driversBox.Controls.Add(installBtn);
-            Controls.Add(driversBox);
-            installer = new MiInstaller();
-            component = installer.Container;
+            _driversBox.Text = "Install Drivers";
+            _driversBox.FlatStyle = FlatStyle.Flat;
+            _driversBox.Controls.Add(_installBtn);
+            Controls.Add(_driversBox);
+            _installer = new MiInstaller();
+            component = _installer.Container;
             //
             // driversBox
             //
-            driversBox.Controls.Add(installBtn);
-            driversBox.Location = new Point(32, 26);
-            driversBox.Name = "driversBox";
-            driversBox.Size = new Size(417, 266);
-            driversBox.TabIndex = 0;
-            driversBox.TabStop = false;
-            driversBox.Text = "Install Drivers";
+            _driversBox.Controls.Add(_installBtn);
+            _driversBox.Location = new Point(32, 26);
+            _driversBox.Name = "_driversBox";
+            _driversBox.Size = new Size(417, 266);
+            _driversBox.TabIndex = 0;
+            _driversBox.TabStop = false;
+            _driversBox.Text = "Install Drivers";
             //
             // installBtn
             //
-            installBtn.Location = new Point(332, 233);
-            installBtn.Name = "installBtn";
-            installBtn.Size = new Size(80, 27);
-            installBtn.TabIndex = 1;
-            installBtn.Text = "Install";
-            installBtn.UseVisualStyleBackColor = true;
-            installBtn.Click += ConfirmInstall;
+            _installBtn.Location = new Point(332, 233);
+            _installBtn.Name = "_installBtn";
+            _installBtn.Size = new Size(80, 27);
+            _installBtn.TabIndex = 1;
+            _installBtn.Text = "Install";
+            _installBtn.UseVisualStyleBackColor = true;
+            _installBtn.Click += ConfirmInstall;
+            //
+            // driverNames
+            //
+            _driverListBox.DataSource = _driverName; // TODO fix exception
             //
             // Form1
             //
             AutoScaleMode = AutoScaleMode.Inherit;
             ClientSize = new Size(489, 326);
-            Controls.Add(driversBox);
+            Controls.Add(_driversBox);
             Name = "Form1";
             Text = "Install Drivers";
             Load += DriverFrm_Load;
-            driversBox.ResumeLayout(false);
+            _driversBox.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -69,7 +77,7 @@ namespace QFlashKit.form
 
         private void event_DriverInstall(object sender, EventArgs e)
         {
-            installer.CopyInstallDrivers();
+            _installer.CopyInstallDrivers();
         }
 
         private void DriverFrm_Load(object sender, EventArgs e)
