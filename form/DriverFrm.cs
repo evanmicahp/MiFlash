@@ -13,17 +13,17 @@ namespace QFlashKit.form
         private IContainer component;
         private GroupBox _driversBox;
         private Button _installBtn;
-        private static MiInstaller _installer;
+        private MiInstaller _installer = new MiInstaller();
         private List<String> _driverName = new List<string>();
 
         public DriverFrm()
         {
             InitializeComponent();
-            _installer.EventInstall += DriverFrm_Load;
         }
 
         private void InitializeComponent()
         {
+            _driverName = _installer.GetDriverNames();
             _driversBox = new GroupBox();
             _installBtn = new Button();
             SuspendLayout();
@@ -65,7 +65,6 @@ namespace QFlashKit.form
             Controls.Add(_driversBox);
             Name = "Form1";
             Text = "Install Drivers";
-            Load += DriverFrm_Load;
             _driversBox.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -73,12 +72,14 @@ namespace QFlashKit.form
 
         private void ConfirmInstall(object sender, EventArgs e)
         {
-            new ConfirmInstallFrm().Show();
-        }
-
-        private void DriverFrm_Load(object sender, EventArgs e)
-        {
-            _driverName = _installer.GetDriverNames();
+            // new ConfirmInstallFrm().Show();
+            var confirmResult =
+                MessageBox.Show("Install Drivers?", "Confirm Driver Install", MessageBoxButtons.OKCancel);
+            if (confirmResult == DialogResult.OK)
+            {
+                _installer.CopyInstallDrivers();
+                var confirmedBox = MessageBox.Show("Drivers Installed.", "Drivers Installed.", MessageBoxButtons.OK);
+            }
         }
     }
 }
