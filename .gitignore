@@ -1,3 +1,5 @@
 /bin/*
 /obj/*
 .idea/*
+QFlashKitTests/bin/*
+QFlashKitTests/obj/*
