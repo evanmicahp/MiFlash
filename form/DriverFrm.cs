@@ -14,7 +14,7 @@ namespace QFlashKit.form
         private GroupBox _driversBox;
         private Button _installBtn;
         private static MiInstaller _installer;
-        private List<String> _driverName = _installer.GetDriverNames();
+        private List<String> _driverName = new List<string>();
 
         public DriverFrm()
         {
@@ -68,6 +68,7 @@ namespace QFlashKit.form
             Load += DriverFrm_Load;
             _driversBox.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         private void ConfirmInstall(object sender, EventArgs e)
@@ -75,13 +76,9 @@ namespace QFlashKit.form
             new ConfirmInstallFrm().Show();
         }
 
-        private void event_DriverInstall(object sender, EventArgs e)
-        {
-            _installer.CopyInstallDrivers();
-        }
-
         private void DriverFrm_Load(object sender, EventArgs e)
         {
+            _driverName = _installer.GetDriverNames();
         }
     }
 }

@@ -66,6 +66,7 @@
     <Compile Include="form\DriverFrm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="form\DriverInstalledDialog.cs" />
     <Compile Include="MiInstaller.cs">
       <SubType>Component</SubType>
     </Compile>

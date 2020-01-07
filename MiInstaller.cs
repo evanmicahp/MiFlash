@@ -79,7 +79,8 @@ namespace QFlashKit
 
         private void CopyFiles()
         {
-            var parameter = Context.Parameters["assemblypath"];
+            // var parameter = Context.Parameters["assemblypath"];
+            var parameter = AppDomain.CurrentDomain.BaseDirectory;
             var installationPath = parameter.Substring(0, parameter.LastIndexOf('\\') + 1);
             try
             {
@@ -108,7 +109,8 @@ namespace QFlashKit
 
         private void InstallAllDriver()
         {
-            var parameter = Context.Parameters["assemblypath"];
+            // var parameter = Context.Parameters["assemblypath"];
+            var parameter = AppDomain.CurrentDomain.BaseDirectory;
             var installationPath = parameter.Substring(0, parameter.LastIndexOf('\\') + 1);
             var path = installationPath + "Source\\ThirdParty\\";
             if (new DirectoryInfo(path).Exists)

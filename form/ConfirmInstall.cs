@@ -79,6 +79,7 @@ namespace QFlashKit.form
         private void InstallDrivers(object sender, EventArgs e)
         {
             _installer.CopyInstallDrivers();
+            new DriverInstalledDialog().Show();
         }
     }
 }
