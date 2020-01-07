@@ -13,7 +13,6 @@ namespace QFlashKit
     public class MiInstaller : Installer
     {
         private IContainer components;
-
         private String[] strArray = new string[5]
         {
             "Google\\Driver\\android_winusb.inf",
@@ -173,9 +172,9 @@ namespace QFlashKit
             }
         }
 
-        public List<String> GetDriverNames()
+        public List<string> GetDriverNames()
         {
-            List<String> strlist = new List<string>();
+            List<string> strlist = new List<string>();
             foreach (var str in strArray)
             {
                 strlist.Add(str);
