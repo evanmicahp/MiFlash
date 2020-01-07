@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using QFlashKit;
 
@@ -26,7 +27,7 @@ namespace QFlashKitTests
             {
                 test.Add(str);
             }
-            Assert.True(test == getNames);
+            Assert.True(Enumerable.SequenceEqual(test, getNames));
         }
     }
 }
