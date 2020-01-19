@@ -1,5 +1,5 @@
 language: csharp
-solution: QFlashKit.sln
+solution: sccdownloader.sln
 deploy:
   provider: releases
   api_key:
